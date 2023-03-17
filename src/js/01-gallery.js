@@ -1,5 +1,5 @@
-import SimpleLightbox from 'simplelightbox';
 import { galleryItems } from './gallery-items';
+import SimpleLightbox from 'simplelightbox';
 
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
@@ -17,8 +17,8 @@ const markupGallery = galleryItems
 galleryRew.insertAdjacentHTML('afterbegin', markupGallery);
 console.log(galleryItems);
 
-let lightbox = new SimpleLightbox('.gallery a', {
+new SimpleLightbox('.gallery a', {
+  captions: true,
   captionsData: 'alt',
-  captionPosition: 'bottom',
   captionDelay: 250,
 });
